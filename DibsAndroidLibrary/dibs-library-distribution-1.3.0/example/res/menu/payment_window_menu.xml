@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+            android:id="@+id/menuitem_payment_window_cancel"
+            android:title="@string/menuitem_payment_window_cancel"/>
+</menu>

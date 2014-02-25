@@ -1,0 +1,28 @@
+<assembly xmlns="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.0 http://maven.apache.org/xsd/assembly-1.1.0.xsd">
+    <id>project</id>
+
+    <formats>
+        <format>zip</format>
+    </formats>
+
+    <!-- Explicitly do NOT package with a base-directory in beginning of packaged paths -->
+    <!-- because this assembly will be unpacked into a "example" dir when packaged as   -->
+    <!-- part of the "distribution" assembly.                                           -->
+    <includeBaseDirectory>false</includeBaseDirectory>
+
+    <fileSets>
+        <fileSet>
+            <directory>${project.basedir}</directory>
+            <outputDirectory>/</outputDirectory>
+            <useDefaultExcludes>true</useDefaultExcludes>
+            <excludes>
+                <exclude>**/*.log</exclude>
+                <exclude>**/${project.build.directory}/**</exclude>
+                <exclude>*.iml</exclude>
+                <exclude>.idea</exclude>
+            </excludes>
+        </fileSet>
+    </fileSets>
+</assembly>

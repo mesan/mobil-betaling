@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">DIBS Example App</string>
+
+    <string name="menuitem_payment_window_cancel">Cancel payment</string>
+</resources>
