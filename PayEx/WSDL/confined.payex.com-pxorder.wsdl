@@ -1,0 +1,830 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://confined.payex.com/PxOrder/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://confined.payex.com/PxOrder/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://confined.payex.com/PxOrder/">
+      <s:element name="SaleCC">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="accountNumber" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="orderRef" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="userType" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="userRef" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cardNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cardNumberExpireMonth" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cardNumberExpireYear" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cardNumberCVC" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="hash" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaleCCResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SaleCCResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaleCC2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="accountNumber" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="orderRef" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="userType" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="userRef" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cardNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cardNumberExpireMonth" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cardNumberExpireYear" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cardNumberCVC" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cardHolderName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="hash" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaleCC2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SaleCC2Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaleCC3">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="accountNumber" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="orderRef" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="transactionType" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="userType" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="userRef" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cardNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cardNumberExpireMonth" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cardNumberExpireYear" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cardNumberCVC" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cardHolderName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="hash" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaleCC3Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SaleCC3Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AuthorizeCC">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="accountNumber" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="orderRef" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="userType" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="userRef" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cardNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cardNumberExpireMonth" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cardNumberExpireYear" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cardNumberCVC" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="hash" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AuthorizeCCResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AuthorizeCCResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AuthorizeCC2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="accountNumber" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="orderRef" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="userType" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="userRef" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cardNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cardNumberExpireMonth" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cardNumberExpireYear" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cardNumberCVC" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cardHolderName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="hash" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AuthorizeCC2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AuthorizeCC2Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AuthorizeCC3">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="accountNumber" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="orderRef" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="transactionType" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="userType" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="userRef" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cardNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cardNumberExpireMonth" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cardNumberExpireYear" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cardNumberCVC" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cardHolderName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="hash" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AuthorizeCC3Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AuthorizeCC3Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PrepareAuthorizeCC2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="accountNumber" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="orderRef" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="userType" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="userRef" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cardNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cardNumberExpireMonth" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cardNumberExpireYear" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cardNumberCVC" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cardHolderName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="hash" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PrepareAuthorizeCC2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PrepareAuthorizeCC2Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PrepareSaleCC">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="accountNumber" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="orderRef" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="userType" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="userRef" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cardNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cardNumberExpireMonth" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cardNumberExpireYear" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cardNumberCVC" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cardHolderName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="clientIPAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="clientIdentifier" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="hash" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PrepareSaleCCResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PrepareSaleCCResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PrepareSaleCC2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="accountNumber" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="orderRef" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="userType" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="userRef" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cardNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cardNumberExpireMonth" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cardNumberExpireYear" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cardNumberCVC" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cardHolderName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="hash" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PrepareSaleCC2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PrepareSaleCC2Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PrepareAuthorizeCC">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="accountNumber" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="orderRef" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="userType" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="userRef" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cardNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cardNumberExpireMonth" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cardNumberExpireYear" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cardNumberCVC" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cardHolderName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="clientIPAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="clientIdentifier" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="hash" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PrepareAuthorizeCCResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PrepareAuthorizeCCResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="SaleCCSoapIn">
+    <wsdl:part name="parameters" element="tns:SaleCC" />
+  </wsdl:message>
+  <wsdl:message name="SaleCCSoapOut">
+    <wsdl:part name="parameters" element="tns:SaleCCResponse" />
+  </wsdl:message>
+  <wsdl:message name="SaleCC2SoapIn">
+    <wsdl:part name="parameters" element="tns:SaleCC2" />
+  </wsdl:message>
+  <wsdl:message name="SaleCC2SoapOut">
+    <wsdl:part name="parameters" element="tns:SaleCC2Response" />
+  </wsdl:message>
+  <wsdl:message name="SaleCC3SoapIn">
+    <wsdl:part name="parameters" element="tns:SaleCC3" />
+  </wsdl:message>
+  <wsdl:message name="SaleCC3SoapOut">
+    <wsdl:part name="parameters" element="tns:SaleCC3Response" />
+  </wsdl:message>
+  <wsdl:message name="AuthorizeCCSoapIn">
+    <wsdl:part name="parameters" element="tns:AuthorizeCC" />
+  </wsdl:message>
+  <wsdl:message name="AuthorizeCCSoapOut">
+    <wsdl:part name="parameters" element="tns:AuthorizeCCResponse" />
+  </wsdl:message>
+  <wsdl:message name="AuthorizeCC2SoapIn">
+    <wsdl:part name="parameters" element="tns:AuthorizeCC2" />
+  </wsdl:message>
+  <wsdl:message name="AuthorizeCC2SoapOut">
+    <wsdl:part name="parameters" element="tns:AuthorizeCC2Response" />
+  </wsdl:message>
+  <wsdl:message name="AuthorizeCC3SoapIn">
+    <wsdl:part name="parameters" element="tns:AuthorizeCC3" />
+  </wsdl:message>
+  <wsdl:message name="AuthorizeCC3SoapOut">
+    <wsdl:part name="parameters" element="tns:AuthorizeCC3Response" />
+  </wsdl:message>
+  <wsdl:message name="PrepareAuthorizeCC2SoapIn">
+    <wsdl:part name="parameters" element="tns:PrepareAuthorizeCC2" />
+  </wsdl:message>
+  <wsdl:message name="PrepareAuthorizeCC2SoapOut">
+    <wsdl:part name="parameters" element="tns:PrepareAuthorizeCC2Response" />
+  </wsdl:message>
+  <wsdl:message name="PrepareSaleCCSoapIn">
+    <wsdl:part name="parameters" element="tns:PrepareSaleCC" />
+  </wsdl:message>
+  <wsdl:message name="PrepareSaleCCSoapOut">
+    <wsdl:part name="parameters" element="tns:PrepareSaleCCResponse" />
+  </wsdl:message>
+  <wsdl:message name="PrepareSaleCC2SoapIn">
+    <wsdl:part name="parameters" element="tns:PrepareSaleCC2" />
+  </wsdl:message>
+  <wsdl:message name="PrepareSaleCC2SoapOut">
+    <wsdl:part name="parameters" element="tns:PrepareSaleCC2Response" />
+  </wsdl:message>
+  <wsdl:message name="PrepareAuthorizeCCSoapIn">
+    <wsdl:part name="parameters" element="tns:PrepareAuthorizeCC" />
+  </wsdl:message>
+  <wsdl:message name="PrepareAuthorizeCCSoapOut">
+    <wsdl:part name="parameters" element="tns:PrepareAuthorizeCCResponse" />
+  </wsdl:message>
+  <wsdl:message name="SaleCCHttpPostIn">
+    <wsdl:part name="accountNumber" type="s:string" />
+    <wsdl:part name="orderRef" type="s:string" />
+    <wsdl:part name="userType" type="s:string" />
+    <wsdl:part name="userRef" type="s:string" />
+    <wsdl:part name="cardNumber" type="s:string" />
+    <wsdl:part name="cardNumberExpireMonth" type="s:string" />
+    <wsdl:part name="cardNumberExpireYear" type="s:string" />
+    <wsdl:part name="cardNumberCVC" type="s:string" />
+    <wsdl:part name="hash" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SaleCCHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="SaleCC2HttpPostIn">
+    <wsdl:part name="accountNumber" type="s:string" />
+    <wsdl:part name="orderRef" type="s:string" />
+    <wsdl:part name="userType" type="s:string" />
+    <wsdl:part name="userRef" type="s:string" />
+    <wsdl:part name="cardNumber" type="s:string" />
+    <wsdl:part name="cardNumberExpireMonth" type="s:string" />
+    <wsdl:part name="cardNumberExpireYear" type="s:string" />
+    <wsdl:part name="cardNumberCVC" type="s:string" />
+    <wsdl:part name="cardHolderName" type="s:string" />
+    <wsdl:part name="hash" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SaleCC2HttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="SaleCC3HttpPostIn">
+    <wsdl:part name="accountNumber" type="s:string" />
+    <wsdl:part name="orderRef" type="s:string" />
+    <wsdl:part name="transactionType" type="s:string" />
+    <wsdl:part name="userType" type="s:string" />
+    <wsdl:part name="userRef" type="s:string" />
+    <wsdl:part name="cardNumber" type="s:string" />
+    <wsdl:part name="cardNumberExpireMonth" type="s:string" />
+    <wsdl:part name="cardNumberExpireYear" type="s:string" />
+    <wsdl:part name="cardNumberCVC" type="s:string" />
+    <wsdl:part name="cardHolderName" type="s:string" />
+    <wsdl:part name="hash" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SaleCC3HttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="AuthorizeCCHttpPostIn">
+    <wsdl:part name="accountNumber" type="s:string" />
+    <wsdl:part name="orderRef" type="s:string" />
+    <wsdl:part name="userType" type="s:string" />
+    <wsdl:part name="userRef" type="s:string" />
+    <wsdl:part name="cardNumber" type="s:string" />
+    <wsdl:part name="cardNumberExpireMonth" type="s:string" />
+    <wsdl:part name="cardNumberExpireYear" type="s:string" />
+    <wsdl:part name="cardNumberCVC" type="s:string" />
+    <wsdl:part name="hash" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AuthorizeCCHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="AuthorizeCC2HttpPostIn">
+    <wsdl:part name="accountNumber" type="s:string" />
+    <wsdl:part name="orderRef" type="s:string" />
+    <wsdl:part name="userType" type="s:string" />
+    <wsdl:part name="userRef" type="s:string" />
+    <wsdl:part name="cardNumber" type="s:string" />
+    <wsdl:part name="cardNumberExpireMonth" type="s:string" />
+    <wsdl:part name="cardNumberExpireYear" type="s:string" />
+    <wsdl:part name="cardNumberCVC" type="s:string" />
+    <wsdl:part name="cardHolderName" type="s:string" />
+    <wsdl:part name="hash" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AuthorizeCC2HttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="AuthorizeCC3HttpPostIn">
+    <wsdl:part name="accountNumber" type="s:string" />
+    <wsdl:part name="orderRef" type="s:string" />
+    <wsdl:part name="transactionType" type="s:string" />
+    <wsdl:part name="userType" type="s:string" />
+    <wsdl:part name="userRef" type="s:string" />
+    <wsdl:part name="cardNumber" type="s:string" />
+    <wsdl:part name="cardNumberExpireMonth" type="s:string" />
+    <wsdl:part name="cardNumberExpireYear" type="s:string" />
+    <wsdl:part name="cardNumberCVC" type="s:string" />
+    <wsdl:part name="cardHolderName" type="s:string" />
+    <wsdl:part name="hash" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AuthorizeCC3HttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="PrepareAuthorizeCC2HttpPostIn">
+    <wsdl:part name="accountNumber" type="s:string" />
+    <wsdl:part name="orderRef" type="s:string" />
+    <wsdl:part name="userType" type="s:string" />
+    <wsdl:part name="userRef" type="s:string" />
+    <wsdl:part name="cardNumber" type="s:string" />
+    <wsdl:part name="cardNumberExpireMonth" type="s:string" />
+    <wsdl:part name="cardNumberExpireYear" type="s:string" />
+    <wsdl:part name="cardNumberCVC" type="s:string" />
+    <wsdl:part name="cardHolderName" type="s:string" />
+    <wsdl:part name="hash" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="PrepareAuthorizeCC2HttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="PrepareSaleCCHttpPostIn">
+    <wsdl:part name="accountNumber" type="s:string" />
+    <wsdl:part name="orderRef" type="s:string" />
+    <wsdl:part name="userType" type="s:string" />
+    <wsdl:part name="userRef" type="s:string" />
+    <wsdl:part name="cardNumber" type="s:string" />
+    <wsdl:part name="cardNumberExpireMonth" type="s:string" />
+    <wsdl:part name="cardNumberExpireYear" type="s:string" />
+    <wsdl:part name="cardNumberCVC" type="s:string" />
+    <wsdl:part name="cardHolderName" type="s:string" />
+    <wsdl:part name="clientIPAddress" type="s:string" />
+    <wsdl:part name="clientIdentifier" type="s:string" />
+    <wsdl:part name="hash" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="PrepareSaleCCHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="PrepareSaleCC2HttpPostIn">
+    <wsdl:part name="accountNumber" type="s:string" />
+    <wsdl:part name="orderRef" type="s:string" />
+    <wsdl:part name="userType" type="s:string" />
+    <wsdl:part name="userRef" type="s:string" />
+    <wsdl:part name="cardNumber" type="s:string" />
+    <wsdl:part name="cardNumberExpireMonth" type="s:string" />
+    <wsdl:part name="cardNumberExpireYear" type="s:string" />
+    <wsdl:part name="cardNumberCVC" type="s:string" />
+    <wsdl:part name="cardHolderName" type="s:string" />
+    <wsdl:part name="hash" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="PrepareSaleCC2HttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="PrepareAuthorizeCCHttpPostIn">
+    <wsdl:part name="accountNumber" type="s:string" />
+    <wsdl:part name="orderRef" type="s:string" />
+    <wsdl:part name="userType" type="s:string" />
+    <wsdl:part name="userRef" type="s:string" />
+    <wsdl:part name="cardNumber" type="s:string" />
+    <wsdl:part name="cardNumberExpireMonth" type="s:string" />
+    <wsdl:part name="cardNumberExpireYear" type="s:string" />
+    <wsdl:part name="cardNumberCVC" type="s:string" />
+    <wsdl:part name="cardHolderName" type="s:string" />
+    <wsdl:part name="clientIPAddress" type="s:string" />
+    <wsdl:part name="clientIdentifier" type="s:string" />
+    <wsdl:part name="hash" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="PrepareAuthorizeCCHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:portType name="PxOrderSoap">
+    <wsdl:operation name="SaleCC">
+      <wsdl:input message="tns:SaleCCSoapIn" />
+      <wsdl:output message="tns:SaleCCSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaleCC2">
+      <wsdl:input message="tns:SaleCC2SoapIn" />
+      <wsdl:output message="tns:SaleCC2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaleCC3">
+      <wsdl:input message="tns:SaleCC3SoapIn" />
+      <wsdl:output message="tns:SaleCC3SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AuthorizeCC">
+      <wsdl:input message="tns:AuthorizeCCSoapIn" />
+      <wsdl:output message="tns:AuthorizeCCSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AuthorizeCC2">
+      <wsdl:input message="tns:AuthorizeCC2SoapIn" />
+      <wsdl:output message="tns:AuthorizeCC2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AuthorizeCC3">
+      <wsdl:input message="tns:AuthorizeCC3SoapIn" />
+      <wsdl:output message="tns:AuthorizeCC3SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PrepareAuthorizeCC2">
+      <wsdl:input message="tns:PrepareAuthorizeCC2SoapIn" />
+      <wsdl:output message="tns:PrepareAuthorizeCC2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PrepareSaleCC">
+      <wsdl:input message="tns:PrepareSaleCCSoapIn" />
+      <wsdl:output message="tns:PrepareSaleCCSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PrepareSaleCC2">
+      <wsdl:input message="tns:PrepareSaleCC2SoapIn" />
+      <wsdl:output message="tns:PrepareSaleCC2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PrepareAuthorizeCC">
+      <wsdl:input message="tns:PrepareAuthorizeCCSoapIn" />
+      <wsdl:output message="tns:PrepareAuthorizeCCSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="PxOrderHttpPost">
+    <wsdl:operation name="SaleCC">
+      <wsdl:input message="tns:SaleCCHttpPostIn" />
+      <wsdl:output message="tns:SaleCCHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaleCC2">
+      <wsdl:input message="tns:SaleCC2HttpPostIn" />
+      <wsdl:output message="tns:SaleCC2HttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaleCC3">
+      <wsdl:input message="tns:SaleCC3HttpPostIn" />
+      <wsdl:output message="tns:SaleCC3HttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AuthorizeCC">
+      <wsdl:input message="tns:AuthorizeCCHttpPostIn" />
+      <wsdl:output message="tns:AuthorizeCCHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AuthorizeCC2">
+      <wsdl:input message="tns:AuthorizeCC2HttpPostIn" />
+      <wsdl:output message="tns:AuthorizeCC2HttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AuthorizeCC3">
+      <wsdl:input message="tns:AuthorizeCC3HttpPostIn" />
+      <wsdl:output message="tns:AuthorizeCC3HttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PrepareAuthorizeCC2">
+      <wsdl:input message="tns:PrepareAuthorizeCC2HttpPostIn" />
+      <wsdl:output message="tns:PrepareAuthorizeCC2HttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PrepareSaleCC">
+      <wsdl:input message="tns:PrepareSaleCCHttpPostIn" />
+      <wsdl:output message="tns:PrepareSaleCCHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PrepareSaleCC2">
+      <wsdl:input message="tns:PrepareSaleCC2HttpPostIn" />
+      <wsdl:output message="tns:PrepareSaleCC2HttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PrepareAuthorizeCC">
+      <wsdl:input message="tns:PrepareAuthorizeCCHttpPostIn" />
+      <wsdl:output message="tns:PrepareAuthorizeCCHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="PxOrderSoap" type="tns:PxOrderSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SaleCC">
+      <soap:operation soapAction="http://confined.payex.com/PxOrder/SaleCC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaleCC2">
+      <soap:operation soapAction="http://confined.payex.com/PxOrder/SaleCC2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaleCC3">
+      <soap:operation soapAction="http://confined.payex.com/PxOrder/SaleCC3" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuthorizeCC">
+      <soap:operation soapAction="http://confined.payex.com/PxOrder/AuthorizeCC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuthorizeCC2">
+      <soap:operation soapAction="http://confined.payex.com/PxOrder/AuthorizeCC2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuthorizeCC3">
+      <soap:operation soapAction="http://confined.payex.com/PxOrder/AuthorizeCC3" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PrepareAuthorizeCC2">
+      <soap:operation soapAction="http://confined.payex.com/PxOrder/PrepareAuthorizeCC2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PrepareSaleCC">
+      <soap:operation soapAction="http://confined.payex.com/PxOrder/PrepareSaleCC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PrepareSaleCC2">
+      <soap:operation soapAction="http://confined.payex.com/PxOrder/PrepareSaleCC2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PrepareAuthorizeCC">
+      <soap:operation soapAction="http://confined.payex.com/PxOrder/PrepareAuthorizeCC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="PxOrderSoap12" type="tns:PxOrderSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SaleCC">
+      <soap12:operation soapAction="http://confined.payex.com/PxOrder/SaleCC" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaleCC2">
+      <soap12:operation soapAction="http://confined.payex.com/PxOrder/SaleCC2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaleCC3">
+      <soap12:operation soapAction="http://confined.payex.com/PxOrder/SaleCC3" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuthorizeCC">
+      <soap12:operation soapAction="http://confined.payex.com/PxOrder/AuthorizeCC" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuthorizeCC2">
+      <soap12:operation soapAction="http://confined.payex.com/PxOrder/AuthorizeCC2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuthorizeCC3">
+      <soap12:operation soapAction="http://confined.payex.com/PxOrder/AuthorizeCC3" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PrepareAuthorizeCC2">
+      <soap12:operation soapAction="http://confined.payex.com/PxOrder/PrepareAuthorizeCC2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PrepareSaleCC">
+      <soap12:operation soapAction="http://confined.payex.com/PxOrder/PrepareSaleCC" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PrepareSaleCC2">
+      <soap12:operation soapAction="http://confined.payex.com/PxOrder/PrepareSaleCC2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PrepareAuthorizeCC">
+      <soap12:operation soapAction="http://confined.payex.com/PxOrder/PrepareAuthorizeCC" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="PxOrderHttpPost" type="tns:PxOrderHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="SaleCC">
+      <http:operation location="/SaleCC" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaleCC2">
+      <http:operation location="/SaleCC2" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaleCC3">
+      <http:operation location="/SaleCC3" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuthorizeCC">
+      <http:operation location="/AuthorizeCC" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuthorizeCC2">
+      <http:operation location="/AuthorizeCC2" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuthorizeCC3">
+      <http:operation location="/AuthorizeCC3" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PrepareAuthorizeCC2">
+      <http:operation location="/PrepareAuthorizeCC2" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PrepareSaleCC">
+      <http:operation location="/PrepareSaleCC" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PrepareSaleCC2">
+      <http:operation location="/PrepareSaleCC2" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PrepareAuthorizeCC">
+      <http:operation location="/PrepareAuthorizeCC" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PxOrder">
+    <wsdl:port name="PxOrderSoap" binding="tns:PxOrderSoap">
+      <soap:address location="http://confined.payex.com/pxconfined/pxorder.asmx" />
+    </wsdl:port>
+    <wsdl:port name="PxOrderSoap12" binding="tns:PxOrderSoap12">
+      <soap12:address location="http://confined.payex.com/pxconfined/pxorder.asmx" />
+    </wsdl:port>
+    <wsdl:port name="PxOrderHttpPost" binding="tns:PxOrderHttpPost">
+      <http:address location="http://confined.payex.com/pxconfined/pxorder.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

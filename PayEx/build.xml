@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- WARNING: Eclipse auto-generated file.
+              Any modifications will be overwritten.
+              To include a user specific buildfile here, simply create one in the same
+              directory with the processing instruction <?eclipse.ant.import?>
+              as the first entry and export the buildfile again. -->
+<project basedir="." default="build" name="PayEx Java Ex">
+    <property environment="env"/>
+    <property name="ECLIPSE_HOME" value="../../Desktop/eclipse"/>
+    <property name="debuglevel" value="source,lines,vars"/>
+    <property name="target" value="1.6"/>
+    <property name="source" value="1.6"/>
+    <path id="EAR Libraries.libraryclasspath"/>
+    <path id="PayEx Java Ex.classpath">
+        <pathelement location="bin"/>
+        <pathelement location="../../Desktop/PayEx/jars/activation-1.1.jar"/>
+        <pathelement location="../../Desktop/PayEx/jars/activemq-core-4.1.1.jar"/>
+        <pathelement location="../../Desktop/PayEx/jars/axis.jar"/>
+        <pathelement location="../../Desktop/PayEx/jars/axis2-codegen-1.3-RC2.jar"/>
+        <pathelement location="../../Desktop/PayEx/jars/axis2-fastinfoset-1.3-RC2.jar"/>
+        <pathelement location="../../Desktop/PayEx/jars/axis2-java2wsdl-1.3-RC2.jar"/>
+        <pathelement location="../../Desktop/PayEx/jars/axis2-saaj-1.3-RC2.jar"/>
+        <pathelement location="../../Desktop/PayEx/jars/axis2-saaj-api-1.3-RC2.jar"/>
+        <pathelement location="../../Desktop/PayEx/jars/commons-discovery-0.2.jar"/>
+        <pathelement location="../../Desktop/PayEx/jars/jaxrpc.jar"/>
+        <pathelement location="../../Desktop/PayEx/jars/jdom.jar"/>
+        <pathelement location="../../Desktop/PayEx/jars/log4j-1.2.13.jar"/>
+        <pathelement location="../../Desktop/PayEx/jars/mail-1.4.jar"/>
+        <pathelement location="../../Desktop/PayEx/jars/org.apache.commons.logging_1.0.4.v200706111724.jar"/>
+        <pathelement location="../../Desktop/PayEx/jars/saaj.jar"/>
+        <pathelement location="../../Desktop/PayEx/jars/wsdl4j-1.6.2.jar"/>
+        <pathelement location="../../Desktop/eclipse/plugins/org.apache.axis_1.4.0.v200807230600/lib/axis.jar"/>
+        <pathelement location="../../Desktop/eclipse/plugins/org.apache.commons.discovery_0.2.0.v200806030120/lib/commons-discovery-0.2.jar"/>
+        <pathelement location="../../Desktop/eclipse/plugins/javax.xml.rpc_1.1.0.v200806030420/lib/jaxrpc.jar"/>
+        <pathelement location="../../Desktop/eclipse/plugins/javax.xml.soap_1.2.0.v200806030421/lib/saaj.jar"/>
+        <pathelement location="../../Desktop/eclipse/plugins/javax.wsdl_1.5.1.v200806030408.jar"/>
+        <pathelement location="../../Desktop/eclipse/plugins/org.apache.commons.logging_1.0.4.v20080605-1930.jar"/>
+        <path refid="EAR Libraries.libraryclasspath"/>
+    </path>
+    <target name="init">
+        <mkdir dir="bin"/>
+        <copy includeemptydirs="false" todir="bin">
+            <fileset dir="src" excludes="**/*.launch, **/*.java"/>
+        </copy>
+    </target>
+    <target name="clean">
+        <delete dir="bin"/>
+    </target>
+    <target depends="clean" name="cleanall"/>
+    <target depends="build-subprojects,build-project" name="build"/>
+    <target name="build-subprojects"/>
+    <target depends="init" name="build-project">
+        <echo message="${ant.project.name}: ${ant.file}"/>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="bin" source="${source}" target="${target}">
+            <src path="src"/>
+            <classpath refid="PayEx Java Ex.classpath"/>
+        </javac>
+    </target>
+    <target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects"/>
+    <target description="copy Eclipse compiler jars to ant lib directory" name="init-eclipse-compiler">
+        <copy todir="${ant.library.dir}">
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </copy>
+        <unzip dest="${ant.library.dir}">
+            <patternset includes="jdtCompilerAdapter.jar"/>
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </unzip>
+    </target>
+    <target description="compile project with Eclipse compiler" name="build-eclipse-compiler">
+        <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
+        <antcall target="build"/>
+    </target>
+    <target name="order (2)">
+        <java classname="order" failonerror="true" fork="yes">
+            <classpath refid="PayEx Java Ex.classpath"/>
+        </java>
+    </target>
+</project>

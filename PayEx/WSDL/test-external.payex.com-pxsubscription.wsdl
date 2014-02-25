@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://external.payex.com/PxSubscription/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://external.payex.com/PxSubscription/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://external.payex.com/PxSubscription/">
+      <s:element name="Check2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="accountNumber" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="productNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="externalId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="hash" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Check2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Check2Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Add">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="accountNumber" type="s:long" />
+            <s:element minOccurs="1" maxOccurs="1" name="clientType" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="clientRef" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="productNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="externalId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="period" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="description" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="hash" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AddResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="Check2SoapIn">
+    <wsdl:part name="parameters" element="tns:Check2" />
+  </wsdl:message>
+  <wsdl:message name="Check2SoapOut">
+    <wsdl:part name="parameters" element="tns:Check2Response" />
+  </wsdl:message>
+  <wsdl:message name="AddSoapIn">
+    <wsdl:part name="parameters" element="tns:Add" />
+  </wsdl:message>
+  <wsdl:message name="AddSoapOut">
+    <wsdl:part name="parameters" element="tns:AddResponse" />
+  </wsdl:message>
+  <wsdl:message name="Check2HttpPostIn">
+    <wsdl:part name="accountNumber" type="s:string" />
+    <wsdl:part name="productNumber" type="s:string" />
+    <wsdl:part name="externalId" type="s:string" />
+    <wsdl:part name="hash" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Check2HttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="AddHttpPostIn">
+    <wsdl:part name="accountNumber" type="s:string" />
+    <wsdl:part name="clientType" type="s:string" />
+    <wsdl:part name="clientRef" type="s:string" />
+    <wsdl:part name="productNumber" type="s:string" />
+    <wsdl:part name="externalId" type="s:string" />
+    <wsdl:part name="period" type="s:string" />
+    <wsdl:part name="description" type="s:string" />
+    <wsdl:part name="hash" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AddHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:portType name="PxSubscriptionSoap">
+    <wsdl:operation name="Check2">
+      <wsdl:input message="tns:Check2SoapIn" />
+      <wsdl:output message="tns:Check2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Add">
+      <wsdl:input message="tns:AddSoapIn" />
+      <wsdl:output message="tns:AddSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="PxSubscriptionHttpPost">
+    <wsdl:operation name="Check2">
+      <wsdl:input message="tns:Check2HttpPostIn" />
+      <wsdl:output message="tns:Check2HttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Add">
+      <wsdl:input message="tns:AddHttpPostIn" />
+      <wsdl:output message="tns:AddHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="PxSubscriptionSoap" type="tns:PxSubscriptionSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Check2">
+      <soap:operation soapAction="http://external.payex.com/PxSubscription/Check2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Add">
+      <soap:operation soapAction="http://external.payex.com/PxSubscription/Add" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="PxSubscriptionSoap12" type="tns:PxSubscriptionSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Check2">
+      <soap12:operation soapAction="http://external.payex.com/PxSubscription/Check2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Add">
+      <soap12:operation soapAction="http://external.payex.com/PxSubscription/Add" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="PxSubscriptionHttpPost" type="tns:PxSubscriptionHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="Check2">
+      <http:operation location="/Check2" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Add">
+      <http:operation location="/Add" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PxSubscription">
+    <wsdl:port name="PxSubscriptionSoap" binding="tns:PxSubscriptionSoap">
+      <soap:address location="https://test-external.payex.com/pxsubscription/pxsubscription.asmx" />
+    </wsdl:port>
+    <wsdl:port name="PxSubscriptionSoap12" binding="tns:PxSubscriptionSoap12">
+      <soap12:address location="https://test-external.payex.com/pxsubscription/pxsubscription.asmx" />
+    </wsdl:port>
+    <wsdl:port name="PxSubscriptionHttpPost" binding="tns:PxSubscriptionHttpPost">
+      <http:address location="https://test-external.payex.com/pxsubscription/pxsubscription.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
