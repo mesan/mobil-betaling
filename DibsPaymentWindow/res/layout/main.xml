@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:padding="10dp"
+        >
+
+    <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/editTextAmount"
+            android:hint="Beløp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="5dp"/>
+
+    <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/editTextCardNumber"
+            android:hint="Kortnummer"
+            android:layout_below="@id/editTextAmount"
+            android:layout_marginBottom="5dp"/>
+
+    <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/editTextCVC"
+            android:hint="CVC"
+            android:layout_below="@id/editTextCardNumber"
+            android:layout_marginBottom="5dp"/>
+    <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/editTextExpMonth"
+            android:hint="Utløpsmåned"
+            android:layout_below="@id/editTextCVC"
+            android:layout_marginBottom="5dp"/>
+    <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/editTextExpYear"
+            android:hint="Utløpsår"
+            android:layout_below="@id/editTextExpMonth"
+            android:layout_marginBottom="5dp"/>
+    <Button
+        android:id="@+id/buttonSubmit"
+        android:layout_below="@id/editTextExpYear"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Kjøp smurfebær"
+        />
+
+</RelativeLayout>
+

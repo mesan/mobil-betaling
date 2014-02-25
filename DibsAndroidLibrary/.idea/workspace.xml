@@ -99,8 +99,8 @@
     <file path="$PROJECT_DIR$/dibs-library-distribution-1.3.0/docs/dk/dibs/android/library/PaymentServerListener.html" changelist="39a82842-a358-428d-8a54-d5cbde136197" time="1392134934205" ignored="false" />
     <file path="/MesanPaymentResultListener.java" changelist="39a82842-a358-428d-8a54-d5cbde136197" time="1392135381095" ignored="false" />
     <file path="/MainActivity.java" changelist="39a82842-a358-428d-8a54-d5cbde136197" time="1392144438436" ignored="false" />
-    <file path="/fragment.java" changelist="39a82842-a358-428d-8a54-d5cbde136197" time="1392145752560" ignored="false" />
-    <file path="/Dummy.txt" changelist="39a82842-a358-428d-8a54-d5cbde136197" time="1392145129159" ignored="false" />
+    <file path="/fragment.java" changelist="39a82842-a358-428d-8a54-d5cbde136197" time="1393344990872" ignored="false" />
+    <file path="/Dummy.txt" changelist="39a82842-a358-428d-8a54-d5cbde136197" time="1393343885477" ignored="false" />
     <file path="/a.dummy" changelist="39a82842-a358-428d-8a54-d5cbde136197" time="1392137167641" ignored="false" />
     <file path="/main.xml" changelist="39a82842-a358-428d-8a54-d5cbde136197" time="1392138252464" ignored="false" />
     <file path="$PROJECT_DIR$/../InAppPayment/AndroidManifest.xml" changelist="39a82842-a358-428d-8a54-d5cbde136197" time="1392140812025" ignored="false" />
@@ -216,6 +216,9 @@
     <file path="C:/Program Files/adt-bundle-windows-x86_64-20130219/sdk/extras/google/play_billing/samples/TrivialDrive/src/com/android/vending/billing/IInAppBillingService.aidl" changelist="39a82842-a358-428d-8a54-d5cbde136197" time="1392145483893" ignored="false" />
     <file path="C:/Program Files/adt-bundle-windows-x86_64-20130219/sdk/extras/google/play_billing/samples/TrivialDrive/src/com/android/vending/billing/InApBillingService.java" changelist="39a82842-a358-428d-8a54-d5cbde136197" time="1392146010087" ignored="false" />
     <file path="C:/Program Files/adt-bundle-windows-x86_64-20130219/sdk/extras/google/play_billing/samples/TrivialDrive/src/com/android/vending/billing/InAppBillingService.java" changelist="39a82842-a358-428d-8a54-d5cbde136197" time="1392146021976" ignored="false" />
+    <file path="$PROJECT_DIR$/../../DibsPaymentWindow/src/main/java/com/example/miniprosjekt_mobil_betaling_DibsPaymentWindow/MyActivity.java" changelist="39a82842-a358-428d-8a54-d5cbde136197" time="1393343575145" ignored="false" />
+    <file path="/AuthorizeCard.java" changelist="39a82842-a358-428d-8a54-d5cbde136197" time="1393343870687" ignored="false" />
+    <file path="$PROJECT_DIR$/../../DibsPaymentWindow/src/main/java/com/example/miniprosjekt_mobil_betaling_DibsPaymentWindow/AuthorizeCard.java" changelist="39a82842-a358-428d-8a54-d5cbde136197" time="1393343873866" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -288,7 +291,7 @@
       <file leaf-file-name="DibsPayment.class" pinned="false" current="true" current-in-tab="true">
         <entry file="jar://$PROJECT_DIR$/dibs-library-distribution-1.3.0/lib/dibs-library-1.3.0.jar!/dk/dibs/android/library/DibsPayment.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="65" selection-start="780" selection-end="780" vertical-scroll-proportion="0.3547826">
+            <state line="19" column="65" selection-start="780" selection-end="780" vertical-scroll-proportion="0.38709676">
               <folding />
             </state>
           </provider>
@@ -363,7 +366,7 @@
     <option name="x" value="-9" />
     <option name="y" value="-9" />
     <option name="width" value="1938" />
-    <option name="height" value="1098" />
+    <option name="height" value="1050" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -447,7 +450,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="AndroidLayoutSelectedEditor" value="text-editor" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="048fe0f5828de03c" />
+    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="192.168.56.101:5555" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="Andersdroid" />
@@ -634,8 +637,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1098" extended-state="6" />
-    <editor active="false" />
+    <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -651,8 +654,8 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25080043" sideWeight="0.67167383" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32832617" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25080043" sideWeight="0.65384614" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34615386" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32921812" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32921812" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -844,7 +847,7 @@
     </entry>
     <entry file="jar://$PROJECT_DIR$/dibs-library-distribution-1.3.0/lib/dibs-library-1.3.0.jar!/dk/dibs/android/library/DibsPayment.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="65" selection-start="780" selection-end="780" vertical-scroll-proportion="0.3547826">
+        <state line="19" column="65" selection-start="780" selection-end="780" vertical-scroll-proportion="0.38709676">
           <folding />
         </state>
       </provider>
